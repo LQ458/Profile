@@ -1,7 +1,7 @@
 <div class="post-list<% if (typeof isArchives === 'boolean' && isArchives === true) { %> archives<% } %>">
   <% posts.each(function (post) { %>
   <article class="post-list-item">
-    <a href="<%- url_for(post.path) %>">
+    <a href="<%- getLocalizedUrl(post.path) %>">
       <% if (post.cover_image) { %>
       <div class="cover-img">
         <img src="<%= post.cover_image %>" alt="<%= post.cover_image_alt %>">

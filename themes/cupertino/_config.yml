@@ -165,3 +165,6 @@ insertions:
     ending: ''
   body:
     ending: ''
+
+menu:
+  language: / || fas fa-language

@@ -1,21 +1,21 @@
 ---
-title: Friends
+title: Amigos
 no_date: true
 no_comments: true
-lang: en
+lang: es
 ---
 
-## Me
+## Sobre mí
 
 <div class="container">
     <div class="card" style="display: grid; grid-template-columns: minmax(128px, 10%) 1fr; padding: 8px 16px;">
         <img src="/favicon.png" alt="Leo Qin's blog's logo" style="height: 100%; object-fit: contain;">
         <div>
             <h1>Leo Qin</h1>
-            <p>I am a high school student developer of JavaScript/Typescript, currently working on some web projects.</p>
+            <p>Soy un estudiante de secundaria desarrollador de JavaScript/Typescript, actualmente trabajando en algunos proyectos web.</p>
             <div class="actions">
                 <div class="right">
-                    <a class="action-button-primary" href="mailto:lqn458@gmail.com">Contact</a>
+                    <a class="action-button-primary" href="mailto:lqn458@gmail.com">Contactar</a>
                 </div>
             </div>
         </div>

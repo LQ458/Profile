@@ -3,9 +3,9 @@
     <div class="links">
       <% for (const group of theme.footer) { %>
       <div class="group">
-        <h2 class="title"><%- group.group_name %></h2>
+        <h2 class="title"><%- __(group.group_name) %></h2>
         <% for (const item of group.items) { %>
-        <a href="<%- url_for(item.url) %>" class="item"><%- item.name %></a>
+        <a href="<%- getLocalizedUrl(item.url) %>" class="item"><%- __(item.name) %></a>
         <% } %>
       </div>
       <% } %>

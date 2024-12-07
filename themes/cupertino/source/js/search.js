@@ -13,10 +13,10 @@
     const options = {
       keys: ['title', 'tags', 'categories'],
       caseSensitive: false,
-      threshold: 0.3
-    };
+      threshold: 0.3,
+    }
 
-    const fuse = new Fuse(searchIndex, options);
+    const fuse = new Fuse(searchIndex, options)
     results = fuse.search(keyword).map(result => result.item)
     console.log(searchIndex)
 

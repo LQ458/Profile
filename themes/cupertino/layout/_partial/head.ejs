@@ -68,7 +68,7 @@
   <% if (config.giscus) { %>
     <%- css('css/giscus') %>
   <% } %>
-  <% if (page.path == "index.html") { %>
+  <% if (page.path.endsWith("index.html")) { %>
   <%- css('css/index') %>
   <% } %>
   <% if (page.path != "index.html") { %>

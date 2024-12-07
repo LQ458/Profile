@@ -1,6 +1,6 @@
 <div>
   <div class="meta">
-    <div class="date"><% /* this is the subtitle, here to pretend to be the date, in order to make the styles work */ %>
+    <div class="date">
       <%= is_category() ? __('category') : '' %>
       <%= is_tag() ? __('tag') : '' %>
     </div>
@@ -14,7 +14,13 @@
 </div>
 
 <div class="container">
-  <%- partial('_partial/post-list', { posts: page.posts, isArchives: true }) %>
+  <%
+  // 过滤当前语言的文章
+  let currentPosts = page.posts.filter(post => {
+    return post.lang === page.lang;
+  });
+  %>
+  <%- partial('_partial/post-list', { posts: currentPosts, isArchives: true }) %>
 </div>
 
 <%- partial('_partial/paginator') %>

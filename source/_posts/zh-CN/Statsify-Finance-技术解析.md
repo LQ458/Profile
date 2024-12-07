@@ -1,43 +1,43 @@
 ---
-title: Statsify Finance Tech Explained
+title: Statsify Finance 技术解析
 date: 2024-11-21 08:00:00
 cover_image: /img/000035.png
-cover_image_alt: A screen shot of Statsify Finance
-categories: Essay
-lang: en
+cover_image_alt: Statsify Finance 的截图
+categories: 文章
+lang: zh-CN
 tags:
-  - website
-  - tech
+  - 网站
+  - 技术
 ---
 
-![A screen shot of Statsify Finance](/img/000035.png)
+![Statsify Finance 的截图](/img/000035.png)
 
-Statsify Finance is a finance tool website for both beginners and professionals.
+Statsify Finance 是一个面向初学者和专业人士的金融工具网站。
 
-# Pages Explanation
+# 页面说明
 
-There are several pages with various functions in the website:
+网站包含多个具有不同功能的页面:
 
-1. **/analysis page**
+1. **/analysis 分析页面**
    - **/analysis/qualitative**
-     - This page provides a comprehensive overview of qualitative economic concepts, featuring detailed explanations and relevant case studies for each concept.
+     - 该页面提供定性经济概念的全面概述，包括每个概念的详细解释和相关案例研究。
    - **/analysis/quantitative**
-     - This page offers an in-depth exploration of quantitative economic concepts, complete with thorough explanations and illustrative case studies.
-2. **/strategy page**
+     - 该页面深入探讨定量经济概念，配有详尽的解释和说明性案例研究。
+2. **/strategy 策略页面**
    - **/strategy/trade**
-     - This page presents various trading strategies, accompanied by insightful case studies to illustrate their application.
+     - 该页面展示各种交易策略，并附有说明其应用的深入案例研究。
    - **/strategy/investor?index=n**
-     - This page details a range of investor profiles, helping users understand different investment approaches.
+     - 该页面详细介绍了各种投资者档案，帮助用户理解不同的投资方法。
    - **/strategy/risk-manage**
-     - This page discusses widely-used risk control methods, along with graphical analyses that classify different industries.
-3. **/articles page**
-   - This page features a collection of economic articles that discuss recent events and trends in the field.
-4. **/search page**
-   - This page allows users to search for any information available on the website, including articles, concepts, and more.
-5. **/finance-terms page**
-   - This page serves as a glossary of finance terms, providing clear definitions and explanations for each term.
+     - 该页面讨论广泛使用的风险控制方法，并附有对不同行业进行分类的图形分析。
+3. **/articles 文章页面**
+   - 该页面收集了讨论该领域近期事件和趋势的经济文章。
+4. **/search 搜索页面**
+   - 该页面允许用户搜索网站上的任何信息，包括文章、概念等。
+5. **/finance-terms 金融术语页面**
+   - 该页面作为金融术语词汇表，为每个术语提供清晰的定义和解释。
 
-# Tech Stack Used
+# 使用的技术栈
 
 - **Next.js**
 - **Tailwind CSS**
@@ -49,17 +49,17 @@ There are several pages with various functions in the website:
 - **Swiper**
 - **Typescript**
 
-The website itself is built with Next.js and Tailwind CSS with Antd UI components as the basic framework. The content management system is based on the next.js API routes + the mongodb for data storage.
+该网站以 Next.js 和 Tailwind CSS 为基础框架，使用 Antd UI 组件。内容管理系统基于 next.js API 路由和 mongodb 数据存储。
 
-**Project Structure**
+**项目结构**
 
 ```
 StatsifyFinance
 ├── LICENSE
 ├── README.md
-├── app # Next.js app
-│   ├── Providers.js # NextAuth Session Provider
-│   ├── admin # Admin pages (Antd UI)
+├── app # Next.js 应用
+│   ├── Providers.js # NextAuth 会话提供者
+│   ├── admin # 管理页面 (Antd UI)
 │   │   ├── (admin-layout)
 │   │   │   ├── analysis
 │   │   │   │   └── page.tsx
@@ -96,52 +96,52 @@ StatsifyFinance
 │   │   │   └── page.tsx
 │   │   └── quantitative
 │   │       └── page.tsx
-│   ├── api # Next.js API routes
+│   ├── api # Next.js API 路由
 │   │   ├── admin
-│   │   │   ├── articles # Admin articles API routes
+│   │   │   ├── articles # Admin 文章 API 路由
 │   │   │   │   ├── [id]
 │   │   │   │   │   └── route.ts
 │   │   │   │   └── route.ts
-│   │   │   ├── category # Admin category API routes
+│   │   │   ├── category # Admin 分类 API 路由
 │   │   │   │   ├── [id]
 │   │   │   │   │   └── route.ts
 │   │   │   │   └── route.ts
-│   │   │   ├── finance-terms # Admin finance terms API routes
+│   │   │   ├── finance-terms # Admin 金融术语 API 路由
 │   │   │   │   ├── [id]
 │   │   │   │   │   └── route.ts
 │   │   │   │   └── route.ts
-│   │   │   ├── learn # Admin learn API routes
+│   │   │   ├── learn # Admin 学习 API 路由
 │   │   │   │   ├── [id]
 │   │   │   │   │   └── route.ts
 │   │   │   │   └── route.ts
-│   │   │   └── users # Admin users API routes
+│   │   │   └── users # Admin 用户 API 路由
 │   │   │       ├── [id]
 │   │   │       │   └── route.ts
 │   │   │       └── route.ts
-│   │   ├── auth # NextAuth authentication API routes
+│   │   ├── auth # NextAuth 认证 API 路由
 │   │   │   └── [...nextauth]
 │   │   │       └── route.ts
-│   │   ├── common # Common API routes
+│   │   ├── common # 通用 API 路由
 │   │   │   ├── upload
 │   │   │   │   └── route.ts
-│   │   │   └── wang_editor # WangEditor API routes
+│   │   │   └── wang_editor # WangEditor API 路由
 │   │   │       └── upload
 │   │   │           └── route.ts
-│   │   └── register # Register API route
+│   │   └── register # 注册 API 路由
 │   │       └── route.ts
-│   ├── articles # Articles pages
+│   ├── articles # 文章页面
 │   │   ├── details
 │   │   │   └── page.tsx
 │   │   └── page.tsx
-│   ├── auth.ts # NextAuth authentication
+│   ├── auth.ts # NextAuth 认证
 │   ├── favicon.ico
 │   ├── finance-terms
 │   │   └── page.tsx
-│   ├── globals.css # Global styles
-│   ├── layout.tsx # Layout component
+│   ├── globals.css # 全局样式
+│   ├── layout.tsx # 布局组件
 │   ├── login
 │   │   └── page.tsx
-│   ├── page.tsx # Home page
+│   ├── page.tsx # 主页
 │   ├── register
 │   │   └── page.tsx
 │   ├── search
@@ -156,7 +156,7 @@ StatsifyFinance
 │       └── trade
 │           └── page.tsx
 ├── components
-│   ├── echarts.tsx # Echarts component
+│   ├── echarts.tsx # Echarts 组件
 │   ├── finance-terms-slider.tsx
 │   ├── footer.tsx
 │   ├── investor-slider.tsx
@@ -166,13 +166,13 @@ StatsifyFinance
 │   ├── message.tsx
 │   ├── news-slider.tsx
 │   ├── side-nav.tsx
-│   ├── str2html.tsx # String to html component
+│   ├── str2html.tsx # 字符串转 html 组件
 │   ├── topbar.tsx
 │   └── user.tsx
 ├── libs
-│   └── mongodb.ts # MongoDB database connection
-├── middleware.ts # Middleware for authentication
-├── models # MongoDB models
+│   └── mongodb.ts # MongoDB 数据库连接
+├── middleware.ts # 认证中间件
+├── models # MongoDB 模型
 │   ├── articles.ts
 │   ├── category.ts
 │   ├── finance-terms.ts
@@ -204,6 +204,6 @@ StatsifyFinance
 │       └── strategy
 │           ├── mainNav.ts
 │           └── rishMng.ts
-├── tailwind.config.ts # Tailwind CSS configuration
-└── tsconfig.json # Typescript configuration
+├── tailwind.config.ts # Tailwind CSS 配置
+└── tsconfig.json # Typescript 配置
 ```

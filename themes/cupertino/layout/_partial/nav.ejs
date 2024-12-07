@@ -1,13 +1,23 @@
 <nav id="theme-nav">
   <div class="inner">
-    <a class="title" href="<%= config.root %>"><%= theme.nav.title %></a>
+    <a class="title" href="<%- getLocalizedUrl('/') %>"><%= theme.nav.title %></a>
     <div class="nav-arrow"></div>
     <div class="nav-items">
-      <a class="nav-item nav-item-home" href="<%= config.root %>" style="--index: 0"><%- __('home') %></a>
+      <a class="nav-item nav-item-home" href="<%- getLocalizedUrl('/') %>" style="--index: 0"><%- __('home') %></a>
 
       <% theme.nav.items.forEach((item, i) => { %>
-      <a class="nav-item<% if (item.is_icon) { %> is-icon<% } %>" href="<%= url_for(item.url) %>" style="--index: <%- i + 1 %>"><%- item.name %></a>
+      <a class="nav-item<% if (item.is_icon) { %> is-icon<% } %>" href="<%- getLocalizedUrl(item.url) %>" style="--index: <%- i + 1 %>"><%- __(item.name) %></a>
       <% }) %>
+      <div class="nav-item nav-item-translate">
+        <i class="bi bi-translate"></i>
+        <div class="language-dropdown">
+          <% Object.entries(site.data.languages).forEach(([key, value]) => { %>
+            <a href="<%- getLocalizedUrl(key) %>" class="language-item">
+              <%= value %>
+            </a>
+          <% }) %>
+        </div>
+      </div>
     </div>
   </div>
 </nav>

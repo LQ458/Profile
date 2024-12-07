@@ -38,7 +38,7 @@
     <p class="tags<%= theme.capitalize_tags ? ' text-capitalize' : '' %>">
       <i class="bi bi-tags icon"></i>
       <% page.tags.forEach(tag => { %>
-      <a href="<%- url_for(tag.path) %>" class="tag"><% if (theme.hashtag_prefix_before_tags) { %>#<% } %><%- tag.name %></a>
+      <a href="<%- getLocalizedUrl(tag.path) %>" class="tag"><% if (theme.hashtag_prefix_before_tags) { %>#<% } %><%- tag.name %></a>
       <% }) %>
     </p>
     <% } %>
@@ -78,9 +78,7 @@
       </script>
     </div>
     <% } %>
-    <% if (config.giscus) { %>
-    <%- config.giscus %>
-    <% } %>
+    <%- partial('_partial/giscus') %>
   <% } %>
 </article>
 <% } %>

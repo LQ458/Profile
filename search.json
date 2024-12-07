@@ -1,27 +1,27 @@
 [
-    {
-        "url": "/articles/Statsify-Finance-Tech-Explained",
-        "title": "Statsify Finance Tech Explained",
-        "tags": ["Website", "Tech"]
-    },
-    {
-        "url": "/articles/css-grid-guide",
-        "title": "A Comprehensive Guide to CSS Grid",
-        "categories": ["CSS", "Web Design"]
-    },
-    {
-        "url": "/articles/react-introduction",
-        "title": "Introduction to React",
-        "categories": ["React", "JavaScript", "Frontend"]
-    },
-    {
-        "url": "/articles/nodejs-best-practices",
-        "title": "Node.js Best Practices",
-        "categories": ["Node.js", "Backend"]
-    },
-    {
-        "url": "/articles/web-accessibility",
-        "title": "Web Accessibility: A Beginner's Guide",
-        "categories": ["Web Development", "Accessibility"]
-    }
+  {
+    "url": "/articles/Statsify-Finance-Tech-Explained",
+    "title": "Statsify Finance Tech Explained",
+    "tags": ["Website", "Tech"]
+  },
+  {
+    "url": "/articles/css-grid-guide",
+    "title": "A Comprehensive Guide to CSS Grid",
+    "categories": ["CSS", "Web Design"]
+  },
+  {
+    "url": "/articles/react-introduction",
+    "title": "Introduction to React",
+    "categories": ["React", "JavaScript", "Frontend"]
+  },
+  {
+    "url": "/articles/nodejs-best-practices",
+    "title": "Node.js Best Practices",
+    "categories": ["Node.js", "Backend"]
+  },
+  {
+    "url": "/articles/web-accessibility",
+    "title": "Web Accessibility: A Beginner's Guide",
+    "categories": ["Web Development", "Accessibility"]
+  }
 ]
